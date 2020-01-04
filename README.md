@@ -1,2 +1,2 @@
 # BoK
-* (2019/12 ~ ) [알고리즘 문제 풀이 스터디](./algo_2019_winter/README.md)
+* (2019/1 ~) [다이내믹 프로그래밍 완전 정복](./dynamic_programming_for_coding_interviews/README.md)
