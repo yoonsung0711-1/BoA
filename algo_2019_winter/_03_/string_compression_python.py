@@ -26,7 +26,7 @@ def comp(s):
                 prev = curr
                 cnt = 0
         remn and whole_str.append(remn)
-        #print("".join(whole_str))
+        # print("".join(whole_str))
         curlen = len("".join(whole_str))
         if curlen < minlen:
             minlen = curlen
