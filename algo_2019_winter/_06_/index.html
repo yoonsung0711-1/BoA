@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Score</title>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+</head>
+<body>
+<p>총 횟수: <input id="c" type="number" readonly size="2" value="0"/></p>
+<p>
+    <input name="s" type="text" readonly size="1" value="A" autofocus/>
+    <input name="s" type="text" readonly size="1" value="A"/>
+    <input name="s" type="text" readonly size="1" value="A"/>
+    <input name="s" type="text" readonly size="1" value="A"/>
+    <input name="s" type="text" readonly size="1" value="A"/>
+    <input name="s" type="text" readonly size="1" value="A"/>
+</p>
+<p>
+    ※ 시작시 첫번째 칸에서 시작하고 ◀ ▶ ▲ ▼ 로 조작할 것!
+</p>
+
+</body>
+<script>
+    var c = 0;
+    var $c = $('#c');
+
+    $('[name=s]').on({
+        'focus': function (e) {
+            $(this).css({
+                'text-decoration': 'underline',
+                'font-weight': 'bold'
+            });
+        },
+        'blur': function (e) {
+            $(this).css({
+                'text-decoration': 'none',
+                'font-weight': 'normal'
+            });
+        },
+        'keydown': function (e) {
+            c++;
+            switch (e.keyCode) {
+                case 37: // left
+                    if ($(this).prev().length > 0) {
+                        $(this).prev().focus()
+                    } else {
+                        var $siblings = $(this).siblings();
+                        $siblings[$siblings.length - 1].focus();
+                    }
+                    break;
+                case 38: // up
+                    var v = $(this).val();
+                    v = v.charCodeAt(0);
+                    v++;
+                    if (v > 90) {
+                        v = 65;
+                    }
+                    v = String.fromCharCode(v);
+                    $(this).val(v);
+                    break;
+                case 39: // right
+                    if ($(this).next().length > 0) {
+                        $(this).next().focus()
+                    } else {
+                        $(this).siblings()[0].focus();
+                    }
+                    break;
+                case 40: // down
+                    var v = $(this).val();
+                    v = v.charCodeAt(0);
+                    v--;
+                    if (v < 65) {
+                        v = 90;
+                    }
+                    v = String.fromCharCode(v);
+                    $(this).val(v);
+                    break;
+                case 9: // tab
+                    e.preventDefault();
+                default:
+                    c--;
+                    break;
+            }
+
+            $c.val(c);
+        }
+    });
+</script>
+</html>
