@@ -1,0 +1,16 @@
+{
+  "name": "_07_",
+  "version": "1.0.0",
+  "license": "MIT",
+  "scripts": {
+    "start": "tsc-watch --onSuccess \"node dist/friends_4_blocks.js\" "
+  },
+  "devDependencies": {
+    "@types/node": "^13.7.0",
+    "tsc-watch": "^4.1.0"
+  },
+  "dependencies": {
+    "global": "^4.4.0",
+    "typescript": "^3.7.5"
+  }
+}
