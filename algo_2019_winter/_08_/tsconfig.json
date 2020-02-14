@@ -1,0 +1,13 @@
+{
+  "compilerOptions": {
+    "module": "esnext",
+    "moduleResolution": "node",
+    "target": "ES5",
+    "types": ["node"],
+    "typeRoots": ["../node_modules/@types"],
+    "sourceMap": true,
+    "outDir": "dist"
+  },
+  "include": ["./**/*.ts"],
+  "exclude": ["node_modules"]
+}

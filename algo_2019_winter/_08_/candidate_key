@@ -1,0 +1,107 @@
+let attr: string[];
+attr = ["sid", "name", "major", "grade"];
+
+interface Student {
+  sid: number;
+  name: string;
+  major: string;
+  grade: number;
+}
+
+let students: Student[] = [
+  { sid: 100, name: "ryan", major: "music", grade: 2 },
+  { sid: 200, name: "apeach", major: "math", grade: 2 },
+  { sid: 300, name: "tube", major: "computer", grade: 3 },
+  { sid: 400, name: "con", major: "computer", grade: 1 },
+  { sid: 500, name: "muzi", major: "music", grade: 3 },
+  { sid: 600, name: "apeach", major: "music", grade: 2 }
+];
+
+let n = attr.length;
+let flags = new Array<boolean>(n);
+let combArr = Array<string[]>();
+let depth = 0;
+
+const combination = (depth, n) => {
+  if (depth == n) {
+    let strbldr: string[] = attr.map((x, idx) => {
+      if (flags[idx]) return attr[idx].toString();
+      else return null;
+    });
+    if (strbldr.some(x => x)) combArr.push(strbldr.filter(x => x));
+    return;
+  }
+
+  flags[depth] = true;
+  combination(depth + 1, n);
+
+  flags[depth] = false;
+  combination(depth + 1, n);
+};
+
+combination(depth, n);
+//console.log(combArr);
+
+console.log(
+  combArr.map((comb, idx) => {
+    let cmap = new Map();
+    cmap.set(
+      new Set(comb),
+      students.map(stdt => comb.map(c => stdt[c].toString()).join("-"))
+    );
+    //students.map(stdt => comb.map(c => stdt[c].toString()).join("-"));
+    //console.log(new Set(comb));
+    //console.log(new Map().set("aaa", "bbb"));
+    //students.map(stdt => comb.map(c => stdt[c].toString()).join("-"));
+    return cmap;
+  })
+);
+
+//console.log(combArr);
+//combArr = combArr.map((comb, idx) => {
+//return comb.map(c => {
+//let p: string = c.toString();
+//let strbldr: string[] = students.map(stdt => {
+//if (stdt.hasOwnProperty(p)) return stdt[p];
+//else return null;
+//});
+//return strbldr.filter(x => x).join("-");
+//});
+//});
+//console.log(combArr);
+
+//let strbldr: string[] = students.map(student[comb.]);
+/*
+combArr[0].forEach(x => {
+  //console.log(stds[0].hasOwnProperty(x.toString()));
+  //console.log(stds[0][x.toString()]);
+  strArr.push(stds[0][x.toString()]);
+});
+*/
+
+//
+//
+
+//let strCtnr = new Array<string>();
+//students.map(s => {
+//let strbldr = new Array<string>();
+
+//combArr[10].forEach(x => {
+//if (x) strbldr.push(s[x.toString()]);
+//});
+//strCtnr.push(strbldr.join("-"));
+//});
+
+//let strCtnr = new Array<string>();
+//students.map(s => {
+//var strArr = new Array<string>();
+
+//combArr[10].forEach(x => {
+//if (x) strArr.push(s[x.toString()]);
+//});
+//strCtnr.push(strArr.join("-"));
+//});
+
+//console.log(strCtnr);
+//console.log(strCtnr.length);
+//console.log(new Set(strCtnr).size);

@@ -1,0 +1,70 @@
+let nums: number[] = [10, 20, 30];
+let n = 3;
+let flags = [];
+
+const combination = (s, r) => {
+  if (r == 0) {
+    console.log(
+      nums
+        .map((num, idx) => {
+          if (flags[idx]) return num.toString();
+          else return null;
+        })
+        .filter(x => x)
+    );
+    return;
+  } else {
+    for (let i = s; i < n; i++) {
+      flags[i] = true;
+      combination(i + 1, r - 1);
+      flags[i] = false;
+    }
+  }
+};
+
+combination(0, 1);
+combination(0, 2);
+combination(0, 3);
+
+//const printnum = (nums, flags) => {
+////let strbldr: string[] = flags.map((f, idx) => {
+//console.log(
+//flags.map((f, idx) => {
+//if (f) return nums[idx].toString();
+//else return null;
+//})
+//);
+//};
+
+//const combination = (nums: number[]) => {
+//let n = nums.length;
+//let flags = new Array<boolean>(n);
+//let comb: Array<Array<string>> = new Array<Array<string>>();
+//const backtrack = (s, r) => {
+//if (r == 0) {
+//printnum(nums, flags);
+////console.log(
+////comb.push(
+////nums.map((num, idx) => {
+////if (flags[idx]) return num.toString();
+////else return null;
+////})
+////);
+////);
+//return;
+//} else {
+//for (let i = s; i < n; i++) {
+//flags[i] = true;
+//backtrack(s + 1, r - 1);
+//flags[i] = false;
+//}
+//}
+//};
+////backtrack(3, 0);
+//for (let r = 1; r <= n; r++) {
+//backtrack(0, r);
+//}
+//return comb;
+//};
+
+//console.log(combination([10, 20, 30]));

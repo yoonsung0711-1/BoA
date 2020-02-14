@@ -1,43 +1,9 @@
 var sArr: string[]; 
 sArr = [ "TTTANT", "RRFACC", "RRRFCC", "TRRRAA", "TTMMMF", "TMMTTJ" ];
+
 const cArr = sArr.map(str => str.split(""));
 const mArr = sArr.map(str => new Array<number>(sArr.length).fill(0));
 
-//console.log(cArr);
-//console.log(mArr);
-
-function memo(i, j) { 
-    if (sArr[i][j] == sArr[i][j + 1] &&
-        sArr[i][j] == sArr[i + 1][j] &&
-        sArr[i][j] == sArr[i + 1][j + 1]) {
-    mArr[i][j] = mArr[i][j] + 1; 
-    mArr[i + 1][j]++;
-    mArr[i][j + 1]++;
-    mArr[i + 1][j + 1]++;
-  }
-}
-
-//1-pass
-for (let i = 0; i < cArr.length - 1; i++) {
-  for (let j = 0; j < cArr[0].length - 1; j++){
-    memo(i, j);
-  }
-};
-
-
-let c = 0;
-mArr.map((x, i) => x.map((y, j) => {
-  if (mArr[i][j] != 0) {
-    c++;
-    mArr[i][j] = null;
-    cArr[i][j] = 'x';
-  }
-}));
-
-//console.log(mArr);
-//console.log(cArr);
-
-//2-pass
 const drop = () => {
     const iter = () => {
         let hasNext = false;
@@ -60,7 +26,7 @@ const drop = () => {
                         mArr[i + 1][j] = mArr[i][j];
                         cArr[i + 1][j] = cArr[i][j];
                         mArr[i][j] = null;
-                        cArr[i][j] = 'x';
+                        cArr[i][j] = null;
                     }
                     break;
                 } 
@@ -71,9 +37,32 @@ const drop = () => {
     while (iter()){};
 }
 
-drop();
-//console.log(mArr);
-//console.log(cArr);
-console.log(c);
-
-
+const recur = () => {
+    let c = 0;
+    let isDroppable = false;
+    for (let i = 0; i < cArr.length - 1; i++) {
+        for (let j = 0; j < cArr[0].length - 1; j++){
+            if (cArr[i][j] != null &&
+                cArr[i][j] == cArr[i][j + 1] &&
+                cArr[i][j] == cArr[i + 1][j] &&
+                cArr[i][j] == cArr[i + 1][j + 1]) {
+                mArr[i][j] = mArr[i][j] + 1; 
+                mArr[i + 1][j]++;
+                mArr[i][j + 1]++;
+                mArr[i + 1][j + 1]++;
+                isDroppable = true;
+            }
+        }
+    };
+    if (!isDroppable) return c;
+    mArr.map((x, i) => x.map((y, j) => {
+        if (mArr[i][j] > 0) {
+            c++;
+            mArr[i][j] = null;
+            cArr[i][j] = null;
+        }
+    }));
+    drop();
+    return c + recur();
+}
+console.log(recur());
