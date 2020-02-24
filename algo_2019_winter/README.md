@@ -1,7 +1,18 @@
 # 알고리즘 스터디(2019. 12 ~)
-> python 자료 구조 라이브러리와 pythonic한 코드 작성 및  
-> typescript(javascript) 자료 구조 라이브러리와 typescriptic한 코드 작성을 연습하기 위해  
+> java, python, typescript (javascript), kotlin 연습을 위해  
 > [프로그래머스](http://programmers.co.kr) 알고리즘 문제 풀이 스터디에 참여함
+
+### 코드 작성 원칙 
+
+- [x] 매 문제마다 2개 이상의 언어로 작성하여 언어별 특성(표현력, 성능, 기능)과 장단점을 비교
+- [x] 언어가 지원하는 명확하고 간결한 표현 방식을 우선 (shorter syntax)
+- [x] 자료구조는 기본형 대신 standard library를 우선 사용 
+- [x] 연산은 Collection 보다는 functional (stream, lambda) 우선 사용
+- [x] 문제의 출제 의도, 모범 풀이 방식에 구애받지 않는 다양한 코딩 sytle 시도
+- [x] recursive loop 처리를 요하는 문제는 tail recursion -> loop 순으로 두 가지를 모두 구현
+- [x] 문제 의도와 무관하게 병행(parallel) 처리, 동시성(concurrency) 처리에 대해 생각해볼 것
+
+### 이력
 
 * [2020. 02. 30(일) / 10 회차](./_10_/_note.md)  
 * [2020. 02. 23(일) / 9 회차](./_09_/_note.md)  

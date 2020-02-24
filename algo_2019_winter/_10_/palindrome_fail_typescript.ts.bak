@@ -1,0 +1,32 @@
+let data: String[] = ["abcdcba", "abacba"];
+
+const solution = s => {
+  let maxLength = s.length;
+  let currLength = maxLength;
+  let midpoint = Math.ceil(s.length / 2) - 1;
+  const checkPalindrome = s => {
+    let isPalindrome = true,
+      cursor = 0;
+    while (cursor < midpoint) {
+      if (s[cursor] != s[s.length - 1 - cursor]) {
+        isPalindrome = false;
+        break;
+      }
+      cursor++;
+    }
+    return isPalindrome;
+  };
+
+  while (currLength >= 2) {
+    for (let shift = 0; shift <= maxLength - currLength; shift++) {
+      if (checkPalindrome(s.substring(0 + shift, currLength + shift))) {
+        console.log(s.substring(0 + shift, currLength + shift));
+        return currLength;
+      }
+    }
+    currLength--;
+  }
+  return 1;
+};
+
+console.log(solution(data[0]));
