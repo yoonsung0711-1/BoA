@@ -9,6 +9,7 @@
   },
   "devDependencies": {
     "@types/node": "^13.7.0",
+    "mavenmon": "^0.0.2",
     "tsc-watch": "^4.1.0"
   },
   "dependencies": {
