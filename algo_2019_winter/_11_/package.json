@@ -1,6 +1,7 @@
 {
   "devDependencies": {
     "@types/node": "^13.7.4",
+    "nodemon": "^2.0.2",
     "tsc-watch": "^4.1.0",
     "typescript": "^3.8.2"
   },

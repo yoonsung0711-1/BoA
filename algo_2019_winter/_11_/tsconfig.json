@@ -1,0 +1,18 @@
+{
+  "compilerOptions": {
+    "module": "esnext",
+    "moduleResolution": "node",
+    "target": "es5",
+    "lib": ["es2015"],
+    "types": ["node"],
+    "typeRoots": ["../node_modules/@types"],
+    "sourceMap": true,
+    "outDir": "./dist",
+    "downlevelIteration": true
+  },
+  "include": ["./**/*.ts"],
+  "exclude": [
+    "node_modules", 
+    "shuttle_bus_tail_recursion.ts"
+  ]
+}
