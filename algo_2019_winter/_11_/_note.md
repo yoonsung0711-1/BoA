@@ -16,5 +16,6 @@
   ![결과](Solution.RecursiveLambda.png)
 
 * [Do it in Java 8: Recursive lambdas](https://dzone.com/articles/do-it-java-8-recursive-lambdas)
+* [Implement recursive lambda function using Java 8](https://stackoverflow.com/questions/19429667/implement-recursive-lambda-function-using-java-8)
 * [Java Lambda (7) 람다와 클로저](https://futurecreator.github.io/2018/08/09/java-lambda-and-closure/)
 * [람다가 이끌어 갈 모던 Java](https://d2.naver.com/helloworld/4911107)

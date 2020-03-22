@@ -1,4 +1,4 @@
-participants = [['leo', 'kiki', 'eden'],
+participants = [["leo", "kiki", "eden"],
                 ['marina', 'josipa', 'nikola', 'vinko', 'filipa'],
                 ['mislav', 'stanko', 'mislav', 'ana']]
 completions = [['eden', 'kiki'],

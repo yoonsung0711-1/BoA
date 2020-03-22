@@ -1,0 +1,15 @@
+{
+  "compilerOptions": {
+    "target": "es5",
+    "moduleResolution": "node",
+    "module": "ESNext",
+    "lib": ["es2015"],
+    "typeRoots": ["../node_modules/@types"],
+    "sourceMap": true,
+    "outDir": "dist",
+    "downlevelIteration": true,
+    "types": ["node", "jest"]
+  },
+  "include": ["./**/*.ts"],
+  "exclude": ["node_modules", "./**/*.test.ts"]
+}

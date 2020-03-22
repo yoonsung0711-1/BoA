@@ -7,15 +7,13 @@ import java.time.LocalTime;
 import java.time.format.DateTimeFormatter;
 import java.util.Comparator;
 
-class Solution {
-
+class SolutionRefac {
   public Function<String, Integer> toNum = (s) -> Integer.parseInt(s);
-
 
   String solution(final int n, final int t, final int m, final String[] _timetable) {
 
-    final LocalTime currentTime = LocalTime.parse("09:00", DateTimeFormatter.ofPattern("H:mm"));
-    final List<LocalTime> timetable = Arrays.asList(_timetable)
+    LocalTime currentTime = LocalTime.parse("09:00", DateTimeFormatter.ofPattern("H:mm"));
+    List<LocalTime> timetable = Arrays.asList(_timetable)
       .stream()
       .map(x -> LocalTime.parse(x, DateTimeFormatter.ofPattern("H:mm")))
       .sorted(Comparator.reverseOrder())
