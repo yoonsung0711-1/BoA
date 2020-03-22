@@ -1,0 +1,37 @@
+{
+  "name": "jasmine-testing-karma",
+  "version": "1.0.0",
+  "description": "jasmine testing with karma",
+  "main": "index.js",
+  "scripts": {
+    "start": "rm -rf dist && sh -c 'npx tsc-watch --onSuccess \"node dist/${0}.js\"'",
+    "dev": "webpack --watch",
+    "test": "npx concurrently 'npm run dev' 'karma start'"
+  },
+  "keywords": [
+    "karma",
+    "test",
+    "jasmine"
+  ],
+  "devDependencies": {
+    "@types/jasmine": "^3.5.9",
+    "@types/node": "^13.9.2",
+    "jasmine-core": "^3.2.1",
+    "karma": "^3.0.0",
+    "karma-chrome-launcher": "^2.2.0",
+    "karma-jasmine": "^3.1.1",
+    "karma-jasmine-html-reporter": "^1.3.1",
+    "karma-phantomjs-launcher": "^1.0.4",
+    "karma-spec-reporter": "0.0.32",
+    "karma-typescript": "^3.0.13",
+    "ts-loader": "^5.2.1",
+    "tsc-watch": "^4.2.3",
+    "webpack": "^4.20.2"
+  },
+  "dependencies": {
+    "concurrently": "^5.1.0",
+    "es6-shim": "^0.35.5",
+    "typescript": "^3.1.1",
+    "webpack-cli": "^3.1.2"
+  }
+}

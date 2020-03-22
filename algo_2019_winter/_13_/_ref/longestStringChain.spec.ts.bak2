@@ -1,0 +1,7 @@
+import { solution } from "./longestStringChain";
+
+describe("", () => {
+  it("", () => {
+    expect(solution(["ab", "b", "a", "abc", "d"]).node.list.length).toBe(3);
+  });
+});

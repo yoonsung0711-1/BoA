@@ -1,0 +1,17 @@
+{
+  "compilerOptions": {
+    "target": "es5",
+    "module": "commonjs",
+    "lib": ["es2015", "DOM"],
+    "sourceMap": true,
+    "baseUrl": ".",
+    "outDir": "./dist/",
+    "noImplicitAny": true,
+    "types": ["node", "jasmine"],
+    "typeRoots": ["../node_modules/@types"],
+    "allowJs": true
+  },
+  "include": ["*.ts"],
+  "exclude": ["node_modules", "*.spec.ts"]
+}
+

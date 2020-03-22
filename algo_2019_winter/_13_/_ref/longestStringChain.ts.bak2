@@ -1,0 +1,85 @@
+interface Node {
+  list?: string[];
+  length: number;
+  next?: Node;
+}
+
+const solution = (words: string[]) => {
+  let node: Node;
+  (() => {
+    words.sort((a: string, b: string) => a.length - b.length);
+    console.log(words);
+
+    let curr_node: Node, next_node: Node;
+    for (let i = words.length - 1; i >= 0; i--) {
+      if (next_node == null) {
+        curr_node = { list: [words[i]], length: words[i].length };
+      } else {
+        if (next_node.length == words[i].length) {
+          next_node.list.push(words[i]);
+        } else {
+          curr_node = {
+            list: [words[i]],
+            length: words[i].length,
+            next: next_node
+          };
+        }
+      }
+      next_node = curr_node;
+      curr_node.next
+        ? console.log(
+            `curr: [${curr_node.list}], next: [${curr_node.next.list}]`
+          )
+        : console.log(`curr: [${curr_node.list}], next: null`);
+    }
+    node = curr_node;
+  })();
+
+  const checkIncluded = (word: string, list: string[]): boolean => {
+    return true;
+  };
+
+  const recursiveLooper = (word: string, node: Node) => {
+    while (true) {
+      if (node.next != null) return;
+
+      if (checkIncluded(word, node.list)) {
+        let next: Node = node.next;
+      } else {
+        return;
+      }
+    }
+  };
+
+  const nodeIterator = () => {
+    let _node = node,
+      maxLen = -1;
+    while (true) {
+      if (_node.next == null) return;
+      for (let element of _node.list) {
+        let word = element,
+          next = _node.next;
+        recursiveLooper(word, node);
+
+        //while (true) {
+        //if (checkIncluded(word, next.list)) {
+        //next = _node.next
+        //} else {
+        //break;
+        //}
+        //}
+      }
+      _node = _node.next;
+    }
+  };
+
+  nodeIterator();
+
+  return {
+    node
+  };
+};
+
+solution(["ab", "b", "a", "abc", "d"]);
+
+export { solution };
