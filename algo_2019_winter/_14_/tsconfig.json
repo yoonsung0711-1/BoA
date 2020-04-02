@@ -1,0 +1,18 @@
+{
+  "compilerOptions": {
+    "target": "ES5",
+    "module": "ESNext",
+    "lib": ["ES2017", "ES2016", "ES2015", "DOM"],
+    "sourceMap": true,
+    "baseUrl": ".",
+    "outDir": "./dist/",
+    "noImplicitAny": true,
+    "types": ["node", "jasmine"],
+    "typeRoots": ["../node_modules/@types"],
+    "allowJs": true,
+    "downlevelIteration": true
+  },
+  "include": ["index.spec.ts", "largest_rectangle.ts"],
+  "exclude": ["node_modules"]
+}
+

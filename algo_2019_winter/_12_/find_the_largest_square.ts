@@ -20,8 +20,7 @@ const checkBoard = ( { row, col, length }: Candidate, board: number[][]): number
   let max: number = -1;
   for (let len = length; len > 1; len--) {
     let flag = true;
-    end: 
-    for (let r = row; r < row + len; r++) {
+        for (let r = row; r < row + len; r++) {
       for (let c = col + (length - len); c < col + len; c++) {
         if ((r >= board.length) || (c >= board[0].length) ) {
           flag = false;
