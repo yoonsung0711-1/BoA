@@ -1,0 +1,31 @@
+import java.util.ArrayList;
+import java.util.Collections;
+
+public class LargestRectangle {
+    public static int solution(int[] heights) {
+        int answer = 0;
+        int area = 0;
+        ArrayList<Integer> list = new ArrayList<>();
+        int bottom = 0;
+
+        for(int i=0; i< heights.length; i++) {
+            list.clear();
+            bottom = 0;
+            for(int j = i; j < heights.length; j++) {
+                list.add(heights[j]);
+                area = (++bottom) * Collections.min(list);
+
+                if(area > answer) {
+                    answer =area;
+                }
+            }
+        }
+        return answer;
+    }
+    public static void main(String[] args) {
+        int[] heights = {2,1,5,6,2,3};
+        //int[] heights = {0,1,0,1};
+
+        System.out.println("최종 ->" + solution(heights));
+    }
+}

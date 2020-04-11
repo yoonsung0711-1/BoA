@@ -6,6 +6,6 @@
     "typescript": "^3.8.2"
   },
   "scripts": {
-    "start": "rm -rf dist && sh -c 'npx tsc-watch --onSuccess \"node dist/${0}.js\"'"
+    "start": "rm -rf dist && sh -c 'nodemon -e ts -w ./ -x \"tsc --outDir dist --downlevelIteration ${0}.ts && node dist/${0}.js\"'"
   }
 }

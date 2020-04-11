@@ -15,18 +15,20 @@
 
 ### 이력
 
-* (14) - 2020. 03. 29(일) - [Largest Rectangle in Histogram](./_14_/_note.md) #dp
-* (13) - 2020. 03. 22(일) - [Longest String Chain](./_13_/_note.md) #dp
-* (12) - 2020. 03. 15(일) - [가장 큰 정사각형 찾기](./_12_/_note.md) #dp
-* (11) - 2020. 03. 08(일) - [셔틀버스](./_11_/_note.md) #priority que
-* (10) - 2020. 03. 01(일) - [가장 긴 팰린드롬](./_10_/_note.md) #hash table
-* (09) - 2020. 02. 23(일) - [디스크 컨트롤러](./_09_/_note.md) #priority que / heap
-* (08) - 2020. 02. 16(일) - [후보키](./_08_/_note.md) #dfs / bfs / hashset
-* (07) - 2020. 02. 09(일) - [프렌즈 4블록](./_07_/_note.md)  #dp / dfs / bfs
-* (06) - 2020. 02. 02(일) - [위장](./_06_/_note1.md) #hash
-* (05) - 2020. 01. 19(일) - [124 나라의 숫자](./_05_/_note.md) #math
-* (04) - 2020. 01. 12(일) - [여행경로](./_04_/_note.md)  #dfs / bfs
-* (03) - 2020. 01. 05(일) - [문자열 압축](./_03_/_note.md) #brute force
-* (02) - 2019. 12. 22(일) - [큰 수 만들기](./_02_/_note.md) #greedy
-* (01) - 2019. 12. 15(일) - [완주하지 못한 선수](./_01_/_note.md) #stack / que
+<!--* (16) - 2020. 04. 12(일) - [easy 1](./_16_/note1.md) #binary search tree- [easy 2](./_16_/note2.md) #binary search tree- [easy 3](./_16_/note3.md) #binary search tree-->
+* (15) - 2020. 04. 05(일) - [Capacity To Ship Packages Within D Days](./_15_/note.md) #array / binary search
+* (14) - 2020. 03. 29(일) - [Largest Rectangle in Histogram](./_14_/note.md) #array / stack
+* (13) - 2020. 03. 22(일) - [Longest String Chain](./_13_/note.md) #dp / hash table
+* (12) - 2020. 03. 15(일) - [가장 큰 정사각형 찾기](./_12_/note.md) #dp
+* (11) - 2020. 03. 08(일) - [셔틀버스](./_11_/note.md) #priority que
+* (10) - 2020. 03. 01(일) - [가장 긴 팰린드롬](./_10_/note.md) #hash table / dp
+* (09) - 2020. 02. 23(일) - [디스크 컨트롤러](./_09_/note.md) #priority que / heap
+* (08) - 2020. 02. 16(일) - [후보키](./_08_/note.md) #dfs / bfs / hashset
+* (07) - 2020. 02. 09(일) - [프렌즈 4블록](./_07_/note.md)  #dp / dfs / bfs
+* (06) - 2020. 02. 02(일) - [위장](./_06_/note1.md) #hash - [조이스틱](./_06_/note1.md) #greedy - [영어 끝말잇기](./_06_/note3.md) #hash
+* (05) - 2020. 01. 19(일) - [124 나라의 숫자](./_05_/note.md) #math
+* (04) - 2020. 01. 12(일) - [여행경로](./_04_/note.md)  #dfs / bfs
+* (03) - 2020. 01. 05(일) - [문자열 압축](./_03_/note1.md) #brute force - [캐시](./03_/note2.md) #least recently used
+* (02) - 2019. 12. 22(일) - [큰 수 만들기](./_02_/note.md) #greedy
+* (01) - 2019. 12. 15(일) - [완주하지 못한 선수](./_01_/note1.md) #hash - [타워](./_01_/note2.md) # stack / que
 
