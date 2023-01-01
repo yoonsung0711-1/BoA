@@ -24,14 +24,14 @@
     "karma-phantomjs-launcher": "^1.0.4",
     "karma-spec-reporter": "0.0.32",
     "karma-typescript": "^3.0.13",
-    "ts-loader": "^5.2.1",
+    "ts-loader": "^9.4.2",
     "tsc-watch": "^4.2.3",
-    "webpack": "^4.20.2"
+    "webpack": "^5.75.0"
   },
   "dependencies": {
     "concurrently": "^5.1.0",
     "es6-shim": "^0.35.5",
     "typescript": "^3.1.1",
-    "webpack-cli": "^3.1.2"
+    "webpack-cli": "^5.0.1"
   }
 }
